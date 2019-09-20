@@ -1,0 +1,78 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="normalize.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="shell">
+      <div class="planets">
+        <div
+          style="position: absolute; left: 50%; top: 50%; text-align: center; font-size: 72px;
+        background: -webkit-linear-gradient(#FDC830, #F37335);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;"
+        >
+          ÖREBRO
+        </div>
+        <div class="planet-orbit" id="planet-ceres-orbit">
+          <div class="planet" id="planet-ceres">
+            <div style="color: white">Ceres</div>
+            <svg
+              width="100"
+              height="100"
+              style="margin-top: -50%; margin-left: -50%;"
+            >
+              <radialGradient r="1px" cx="10%" cy="10%" id="ceres-gradient">
+                <stop offset="0" stop-color="#DC2424" />
+                <stop offset="100%" stop-color="#4A569D" />
+              </radialGradient>
+              <circle
+                cx="50"
+                cy="50"
+                r="48"
+                stroke-width="2"
+                fill="url(#ceres-gradient)"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="planet-orbit" id="planet-chaos-orbit">
+          <div class="planet" id="planet-chaos">
+            <svg
+              width="150"
+              height="150"
+              style="margin-top: -50%; margin-left: -50%;"
+            >
+              <radialGradient r="1px" cx="10%" cy="10%" id="chaos-gradient">
+                <stop offset="0" stop-color="#A5CC82" />
+                <stop offset="100%" stop-color="#00467F" />
+              </radialGradient>
+              <circle
+                cx="75"
+                cy="75"
+                r="73"
+                stroke-width="2"
+                fill="url(#chaos-gradient)"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="team-container">
+      <div class="team ceres"></div>
+      <div class="team chaos"></div>
+      <div class="team pluto"></div>
+      <!-- <div class="team jupiter"></div> -->
+    </div>
+  </body>
+
+  <script>
+    var planetChaos = document.getElementById;
+  </script>
+</html>

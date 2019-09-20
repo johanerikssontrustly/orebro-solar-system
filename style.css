@@ -1,0 +1,171 @@
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  overflow: hidden;
+}
+
+.shell {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #334d50; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #cbcaa5,
+    #334d50
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top left,
+    #19547b,
+    #ffd89b
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.planets {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  perspective: 40cm;
+  perspective-origin: 50% 35%;
+  transform-style: preserve-3d;
+}
+
+.planet-orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-style: preserve-3d;
+}
+
+.team-container {
+  mix-blend-mode: overlay;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#planet-ceres-orbit {
+  animation-duration: 60s;
+  animation-name: ceres-orbit;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#planet-ceres {
+  animation-duration: 60s;
+  animation-name: ceres;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes ceres-orbit {
+  0% {
+    transform: rotate3d(1, 1, 0, 0deg) translate3d(-500px, 0, 0);
+  }
+
+  50% {
+    transform: rotate3d(1, 1, 0, 180deg) translate3d(-500px, 0, 0);
+  }
+
+  100% {
+    transform: rotate3d(1, 1, 0, 360deg) translate3d(-500px, 0, 0);
+  }
+}
+
+@keyframes ceres {
+  0% {
+    transform: rotate3d(1, 1, 0, 0deg);
+  }
+
+  50% {
+    transform: rotate3d(1, 1, 0, -180deg);
+  }
+
+  100% {
+    transform: rotate3d(1, 1, 0, -360deg);
+  }
+}
+
+#planet-chaos-orbit {
+  animation-duration: 30s;
+  animation-name: chaos-orbit;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform-style: preserve-3d;
+}
+
+#planet-chaos {
+  animation-duration: 30s;
+  animation-name: chaos;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  transform-style: preserve-3d;
+}
+
+@keyframes chaos-orbit {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg) translate3d(-700px, 0, 0);
+  }
+
+  50% {
+    transform: rotate3d(0, 1, 0, 180deg) translate3d(-700px, 0, 0);
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg) translate3d(-700px, 0, 0);
+  }
+}
+
+@keyframes chaos {
+  0% {
+    transform: rotate3d(0, 1, 0, 0deg);
+  }
+
+  50% {
+    transform: rotate3d(0, 1, 0, -180deg);
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 0, -360deg);
+  }
+}
+
+.team {
+  /* height:; */
+  flex-grow: 2;
+  flex-basis: 1024px;
+}
+
+.chaos {
+  /* border: 1px white dashed; */
+  border-collapse: collapse;
+
+  background: -webkit-radial-gradient(
+    rgba(255, 0, 0, 255),
+    10%,
+    rgba(8, 31, 54, 0)
+  );
+  background: radial-gradient(rgba(255, 0, 0, 0, 255), rgba(8, 31, 54, 0));
+
+  /* background-color: red; */
+}
+
+.ceres {
+  /* border: 1px white dashed; */
+  border-collapse: collapse;
+  /* background-color: blue; */
+}
+.pluto {
+  /* border: 1px white dashed; */
+  border-collapse: collapse;
+  /* background-color: green; */
+}
+.jupiter {
+  /* border: 1px white dashed; */
+  border-collapse: collapse;
+  /* background-color: yellow; */
+}

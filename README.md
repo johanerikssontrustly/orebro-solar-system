@@ -1,2 +1,11 @@
-# orebro-solar-system
-A small artpiece depicting the Örebro solar system
+# Örebro Solar System
+
+## Just run it
+
+```
+npm install
+```
+
+```
+npm start
+```
